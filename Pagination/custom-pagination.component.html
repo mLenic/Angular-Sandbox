@@ -1,0 +1,8 @@
+<div *ngIf="_pgArray.length > 0" class="pgContainer" >
+    <a *ngIf="selectedPgNumber != 1" class="pgItem" (click)="pgIter(false)">&laquo;</a>
+    <a *ngIf="selectedPgNumber == 1" class="pgItem"></a>
+    <a *ngFor="let pg of _pgArray" class="pgItem" [ngClass]="{active: selectedPgNumber == pg}" (click)="setPgNum(pg, $event)">
+        {{pg}}
+    </a>
+    <a *ngIf="selectedPgNumber != _pgNum" class="pgItem" (click)="pgIter(true)">&raquo;</a>
+</div>

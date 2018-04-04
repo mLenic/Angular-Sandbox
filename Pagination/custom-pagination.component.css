@@ -1,0 +1,15 @@
+.pgContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  } 
+  .pgContainer a:hover:not(.active) {background-color: #ddd;}
+  .pgContainer a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .pgItem {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+  }
